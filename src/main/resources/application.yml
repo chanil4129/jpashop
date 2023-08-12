@@ -13,4 +13,5 @@ spring:
 
 logging:
   level:
-    org.hibernate.SQL: debugs
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: trace

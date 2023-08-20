@@ -1,7 +1,9 @@
 package com.jpabook.jpashop.domain;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
@@ -14,6 +16,8 @@ import static jakarta.persistence.FetchType.LAZY;
 @Table(name = "orders")
 @Getter
 @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+//new Order()을 못하게 하기 위한 수단
 public class Order {
     @Id @GeneratedValue
     @Column(name = "order_id")
